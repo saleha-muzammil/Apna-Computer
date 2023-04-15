@@ -23,7 +23,7 @@ function Login(){
         </div>
       </div>
       <div className="footer">
-        <button onClick= {() => {navigate('/components/homepage')}}>Login</button>
+        <button onClick= {() => {navigate('/homepage')}}>Login</button>
       </div>
     </div>
   );
