@@ -1,31 +1,26 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Login.css';
+import image from './images/bg1.png';
+import Signup from './Signup';
 
 function Login(){
-  let navigate = useNavigate();
+  //let navigate = useNavigate();
 
-
+  const myStyle = {backgroundImage: `url(${image})`, backgroundRepeat: 'no-repeat' , 
+  backgroundSize : 'cover' ,
+  backgroundPosition: 'center' ,
+  textAlign: 'center'  ,
+  height: '100vh' ,
+  width: '100vw' 
+};
   return (
-    <div className="base-csontainer">
-      <div className="header"> Login</div>
-      <div className="content">
-        <div className="form">
-          <div className="form-group">
-            <label htmlFor='username'>Username</label>
-            <input type="text" name="username" placeholder="username" />
-          </div>
 
-          <div className="form-group">
-            <label htmlFor='password'>Password</label>
-            <input type="password" name="password" placeholder="password" />
-          </div>
-        </div>
+    <div className="page" style={myStyle}>
+      <h3 class="header">
+    اپنا کمپیوٹر
+        </h3>
+        <div className="formbox">
+      <Signup/> </div>
       </div>
-      <div className="footer">
-        <button onClick= {() => {navigate('/homepage')}}>Login</button>
-      </div>
-    </div>
   );
 }
 

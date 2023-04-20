@@ -1,42 +1,38 @@
-import React from 'react' ; 
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-export class Signup extends React.Component{
-    constructor(props)
-    {
-        super(props); 
-    }
-    render()
-    {
-        return (
-            <div
-                className= "base-container" >
-                    <div className= "header"> Login</div>
-                    <div className= "content">
+function Signup(){
+  let navigate = useNavigate();
 
-                        <div className="form">
 
-                        <div className= "form-group">
-                                <label htmlFor='email'>Email</label>
-                                <input type="email" name="email" placeholder = "email"/>
-                            </div>
+  return (
 
-                            <div className= "form-group">
-                                <label htmlFor='username'>Username</label>
-                                <input type="text" name="username" placeholder = "username"/>
-                            </div>
+   // <div className="base-csontainer">
+      <div className="content">
+        <div className="form">
+        <div class="smallheader"> Login</div>
+        <hr class="tag"/>
+          <div className="form-group">
+            <label htmlFor='username'>Username</label>
+            <input type="text" name="username" placeholder="username" />
+          </div>
 
-                            <div className= "form-group">
-                                <label htmlFor='password'>Password</label>
-                                <input type="password" name="password" placeholder = "password"/>
-                            </div>
+          <div className="form-group">
+            <label htmlFor='password'>Password</label>
+            <input type="password" name="password" placeholder="password" />
+          </div>
+      <div className="footer">
+        <button class="button" onClick= {() => {navigate('/homepage')}}>Login</button>
+        <div><label>Not a member?</label>
+        </div>
+      <div className="footer">
+        <button class="button" onClick= {() => {navigate('/partpicker')}}>Register</button>
 
-                        </div>
-                    </div>
-                    <div className= "footer">
-                        <button type='button' className= "btn">Signup</button>
-                    </div>
-            </div>        )
-    }
+      </div>
+      </div>
+      </div>
+    </div>
+  );
 }
 
-export default Signup; 
+export default Signup ;

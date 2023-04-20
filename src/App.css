@@ -1,26 +1,100 @@
-.App {
-  background-image: url('./images/bg1.png') ;
-  background-repeat : no-repeat ;
-  background-size : cover ; 
-  background-position: center;
-  text-align: center;
+.button
+{
+  top: 50%; 
+  background-color: white;
+  color: #454ab7;
+  min-height:35px; 
+  max-width: 150px;
+  box-shadow: none;
+  border: none ;
+  padding: 15px 32px;
+  
 }
 
-.App-header {
-  /* background-image: url('./images/bg1.png') ;
-  background-repeat : no-repeat ;
-  background-size : cover ; 
-  background-position: center; */
+.button:hover {
+  background-color: #454ab7;
+  transition: 0.7s;
+  color: white;
+}
 
-  min-height: 100vh;
+.button:focus {
+  outline-color: transparent;
+  outline-style:solid;
+  box-shadow: 0 0 0 4px #5a01a7;
+}
+
+ 
+
+label {
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.header {
+  font-size: 4rem;
+  padding-top: 20px;
+  font-weight: 600;
+  color: white;
+  position: absolute ;
+  padding-left: 100px;
+}
+
+.smallheader{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #454ab7;
+  padding-bottom: 10px;
+  padding-top: 15px;
+}
+
+.page{
+  padding: 0%;
+  margin: 0%;
+}
+
+.formbox
+{
+  padding-left: 1200px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  height: 1000px;
+  width: 1000px;
+}
+
+.form {
+  border-radius: 20px;
+  height: 500px;
+  display: flex;
+  margin-top: 3em;
+  flex-direction: column;
+  width: 40%;
+  align-items: center;
+  gap: 30px;
+  background-color: white;
+  opacity: 0.85;
+  color: #454ab7;
+}
+
+.form-group {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(30px + 2vmin);
-  color: white;
-  margin-right: 1111px;
-  margin-bottom: 150px; 
+  align-items: flex-start;
+  width: fit-content;
+}
+
+/* 
+.content{
+  background-color: #5a01a7;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: fit-content;
+} */
+
+.tag{
+  color: #5a01a7;
 }
 
 @keyframes App-logo-spin {
