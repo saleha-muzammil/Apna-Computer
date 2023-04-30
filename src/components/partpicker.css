@@ -1,0 +1,91 @@
+.parttable {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  .th__component,
+  .th__selection,
+  .th__base,
+  .th__promo,
+  .th__shipping,
+  .th__tax,
+  .th__settings,
+  .th__price,
+  .th__where,
+  .th__buy,
+  .th__remove {
+    text-align: center;
+    font-weight: bold;
+    padding: 12px;
+    background-color: #F5F5F5;
+    color: #333;
+    border: 1px solid #ddd;
+    text-decoration-color:brown
+  }
+  
+  .td__component,
+  .td__placement--empty,
+  .td__addComponent {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  
+  
+  .smallbutton {
+    display: inline-block;
+    padding: 8px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: right;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid #ddd;
+    color: #333;
+    background-color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .smallbutton:hover {
+    background-color: #eee;
+  }
+  
+  .smallbutton--icon {
+    padding: 8px;
+  }
+  
+  .smallbutton--small {
+    font-size: 12px;
+    padding: 6px;
+  }
+  
+  .h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .td__addComponent {
+    text-align: center;
+  }
+  
+  .td__addComponent a {
+    text-decoration: none;
+  }
+  
+  .td__addComponent a:hover {
+    background-color: #eee;
+  }
+  a{
+    font-size:medium;
+    color:yellow
+  }

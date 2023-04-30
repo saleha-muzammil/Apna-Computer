@@ -1,9 +1,12 @@
 import React from 'react';
+import Navbar from './Navbar';
+import './partpicker.css';
 
 function partpicker()
 {
     return (
         <div>
+         <Navbar/>
             <div>
                 <h1> Choose your parts</h1>
                 <div>
@@ -34,7 +37,7 @@ CPU
 </td>
 <td class="td__placement--empty"></td>
 <td class="td__addComponent" colspan="11">
-<a href="/products/cpu/" class="button  button--icon button--small">
+<a href="/products/cpu/" class="smallbutton  button--icon button--small">
 Choose A CPU
 </a>
 </td>
@@ -48,7 +51,7 @@ CPU Cooler
 </td>
 <td class="td__placement--empty"></td>
 <td class="td__addComponent" colspan="11">
-<a href="/products/cpu-cooler/" class="button  button--icon button--small">
+<a href="/products/cpu-cooler/" class="roundbutton  button--icon button--small">
 Choose A CPU Cooler
 </a>
 </td>
@@ -61,7 +64,7 @@ Motherboard
 </td>
 <td class="td__placement--empty"></td>
 <td class="td__addComponent" colspan="11">
-<a href="/products/motherboard/" class="button  button--icon button--small">
+<a href="/products/motherboard/" class="roundbutton  button--icon button--small">
 Choose A Motherboard
 </a>
 </td>
@@ -74,7 +77,7 @@ Memory
 </td>
 <td class="td__placement--empty"></td>
 <td class="td__addComponent" colspan="11">
-<a href="/products/memory/" class="button  button--icon button--small">
+<a href="/products/memory/" class="roundbutton  button--icon button--small">
 Choose Memory
 </a>
 </td>
@@ -87,7 +90,7 @@ Storage
 </td>
 <td class="td__placement--empty"></td>
 <td class="td__addComponent" colspan="11">
-<a href="/products/internal-hard-drive/" class="button  button--icon button--small">
+<a href="/products/internal-hard-drive/" class="roundbutton  button--icon button--small">
 Choose Storage
 </a>
 </td>
@@ -100,7 +103,7 @@ Video Card
 </td>
 <td class="td__placement--empty"></td>
 <td class="td__addComponent" colspan="11">
-<a href="/products/video-card/" class="button  button--icon button--small">
+<a href="/products/video-card/" class="roundbutton  button--icon button--small">
 Choose A Video Card
 </a>
 </td>
@@ -113,7 +116,7 @@ Case
 </td>
 <td class="td__placement--empty"></td>
 <td class="td__addComponent" colspan="11">
-<a href="/products/case/" class="button  button--icon button--small">
+<a href="/products/case/" class="roundbutton  button--icon button--small">
 Choose A Case
 </a>
 </td>
@@ -126,7 +129,7 @@ Power Supply
 </td>
 <td class="td__placement--empty"></td>
 <td class="td__addComponent" colspan="11">
-<a href="/products/power-supply/" class="button  button--icon button--small">
+<a href="/products/power-supply/" class="smallbutton  button--icon button--small">
 Choose A Power Supply
 </a>
 </td>
@@ -139,7 +142,7 @@ Operating System
 </td>
 <td class="td__placement--empty"></td>
 <td class="td__addComponent" colspan="11">
-<a href="/products/os/" class="button  button--icon button--small">
+<a href="/products/os/" class="smallbutton  button--icon button--small">
 Choose An Operating System
 </a>
 </td>
@@ -152,7 +155,7 @@ Monitor
 </td>
 <td class="td__placement--empty"></td>
 <td class="td__addComponent" colspan="11">
-<a href="/products/monitor/" class="button  button--icon button--small">
+<a href="/products/monitor/" class="smallbutton  button--icon button--small">
 Choose A Monitor
 </a>
 </td>
