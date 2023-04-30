@@ -61,4 +61,27 @@ catch(err)
 
 })
 
+//  new addition
+router.get('/test', async (req, res) => {
+  try {
+  
+    User.find((err, users) => {
+      if (err) {
+        res.status(500).send('Error encountered.');
+        console.log('error in fetching database.');
+      } else {
+        console.log('sending');
+        console.log('Users:', users);
+        res.json(users);
+      }
+    });
+  } catch (err) {
+    console.log('error');
+    res.json(err);
+  }
+});
+
+
+
+
 module.exports= router;
