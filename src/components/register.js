@@ -15,7 +15,7 @@ function Register(){
     try{
       console.log('xyz')
       console.log(usernameReg)
-      const response = await fetch('http://localhost:4000/api/auth', {
+      const response = await fetch('http://localhost:4000/api/auth/register', {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         mode: "cors", // no-cors, *cors, same-origin
         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
