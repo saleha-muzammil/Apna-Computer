@@ -26,28 +26,250 @@ const ProductForm = () => {
     const pushItem = async (event) => {
         event.preventDefault();
 
+            if(productName === '' || category === '' || base === '' || price === '' || where === '' || siteurl === '' || imageurl === '' || at1 === '' || at2 === '' || at3 === '' || at4 === '') {
+            alert('Please Fill all Fields');
+            console.log('Bruh');
+            return
+        }
+
         try{
-            const response = await fetch('http://localhost:4000/api/auth/${category}',
+
+            if (category=== 'cpu')
             {
-              method: "POST", // *GET, POST, PUT, DELETE, etc.
-              mode: "cors", // no-cors, *cors, same-origin
-              cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-              credentials: "same-origin", // include, *same-origin, omit
-              headers: {
-                "Content-Type": "application/json",
-                // 'Content-Type': 'application/x-www-form-urlencoded',
-              },
-              redirect: "follow", // manual, *follow, error
-              referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-              body: JSON.stringify({productName: productName, base: base, price: price,
-            where: where, imageurl:  imageurl, siteurl: siteurl, at1: at1,
-        at2: at2, at3: at3, at4: at4}), // body data type must match "Content-Type" header
-            })
-            // const response = await axios.post('http://localhost:4000/api/auth', {username: usernameReg,
-            // email: emailReg , password: passwordReg});
-            // console.log(response.data) ; ;
-        navigate('/homepage');
+                console.log("here2");
+
+                const response = await fetch('http://localhost:4000/api/auth/cpu',
+                {
+                  method: "POST", // *GET, POST, PUT, DELETE, etc.
+                  mode: "cors", // no-cors, *cors, same-origin
+                  cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+                  credentials: "same-origin", // include, *same-origin, omit
+                  headers: {
+                    "Content-Type": "application/json",
+                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                  },
+                  redirect: "follow", 
+                  referrerPolicy: "no-referrer", 
+    
+                  body: JSON.stringify({pname: productName, base: base, price: price,
+                where: where, imageURL:  imageurl, siteURL: siteurl, at1: at1,
+            at2: at2, at3: at3, at4: at4}), 
+                })
+    
+             console.log(response.data) ; ;
+            navigate('/homepage');
+
+            }
+            else if (category=== 'cpucooler')
+            {
+                console.log("here2");
+
+                const response = await fetch('http://localhost:4000/api/auth/cpucooler',
+                {
+                  method: "POST", // *GET, POST, PUT, DELETE, etc.
+                  mode: "cors", // no-cors, *cors, same-origin
+                  cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+                  credentials: "same-origin", // include, *same-origin, omit
+                  headers: {
+                    "Content-Type": "application/json",
+                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                  },
+                  redirect: "follow", 
+                  referrerPolicy: "no-referrer", 
+    
+                  body: JSON.stringify({pname: productName, base: base, price: price,
+                where: where, imageURL:  imageurl, siteURL: siteurl, at1: at1,
+            at2: at2, at3: at3, at4: at4}), 
+                })
+    
+             console.log(response.data) ; ;
+            navigate('/homepage');
+
+            }
+            else if (category=== 'videocard')
+            {
+                console.log("here2");
+
+                const response = await fetch('http://localhost:4000/api/auth/videocard',
+                {
+                  method: "POST", // *GET, POST, PUT, DELETE, etc.
+                  mode: "cors", // no-cors, *cors, same-origin
+                  cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+                  credentials: "same-origin", // include, *same-origin, omit
+                  headers: {
+                    "Content-Type": "application/json",
+                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                  },
+                  redirect: "follow", 
+                  referrerPolicy: "no-referrer", 
+    
+                  body: JSON.stringify({pname: productName, base: base, price: price,
+                where: where, imageURL:  imageurl, siteURL: siteurl, at1: at1,
+            at2: at2, at3: at3, at4: at4}), 
+                })
+    
+             console.log(response.data) ; ;
+            navigate('/homepage');
+
+            }
+            else if (category=== 'peripherals')
+            {
+                console.log("here2");
+
+                const response = await fetch('http://localhost:4000/api/auth/peripherals',
+                {
+                  method: "POST", // *GET, POST, PUT, DELETE, etc.
+                  mode: "cors", // no-cors, *cors, same-origin
+                  cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+                  credentials: "same-origin", // include, *same-origin, omit
+                  headers: {
+                    "Content-Type": "application/json",
+                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                  },
+                  redirect: "follow", 
+                  referrerPolicy: "no-referrer", 
+    
+                  body: JSON.stringify({pname: productName, base: base, price: price,
+                where: where, imageURL:  imageurl, siteURL: siteurl, at1: at1,
+            at2: at2, at3: at3, at4: at4}), 
+                })
+    
+             console.log(response.data) ; ;
+            navigate('/homepage');
+
+            }
+            else if (category=== 'memory')
+            {
+                console.log("here2");
+
+                const response = await fetch('http://localhost:4000/api/auth/memory',
+                {
+                  method: "POST", // *GET, POST, PUT, DELETE, etc.
+                  mode: "cors", // no-cors, *cors, same-origin
+                  cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+                  credentials: "same-origin", // include, *same-origin, omit
+                  headers: {
+                    "Content-Type": "application/json",
+                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                  },
+                  redirect: "follow", 
+                  referrerPolicy: "no-referrer", 
+    
+                  body: JSON.stringify({pname: productName, base: base, price: price,
+                where: where, imageURL:  imageurl, siteURL: siteurl, at1: at1,
+            at2: at2, at3: at3, at4: at4}), 
+                })
+    
+             console.log(response.data) ; ;
+            navigate('/homepage');
+
+            }
+            else if (category=== 'storage')
+            {
+                console.log("here2");
+
+                const response = await fetch('http://localhost:4000/api/auth/storage',
+                {
+                  method: "POST", // *GET, POST, PUT, DELETE, etc.
+                  mode: "cors", // no-cors, *cors, same-origin
+                  cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+                  credentials: "same-origin", // include, *same-origin, omit
+                  headers: {
+                    "Content-Type": "application/json",
+                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                  },
+                  redirect: "follow", 
+                  referrerPolicy: "no-referrer", 
+    
+                  body: JSON.stringify({pname: productName, base: base, price: price,
+                where: where, imageURL:  imageurl, siteURL: siteurl, at1: at1,
+            at2: at2, at3: at3, at4: at4}), 
+                })
+    
+             console.log(response.data) ; ;
+            navigate('/homepage');
+
+            }
+            else if (category=== 'cases')
+            {
+                console.log("here2");
+
+                const response = await fetch('http://localhost:4000/api/auth/cases',
+                {
+                  method: "POST", // *GET, POST, PUT, DELETE, etc.
+                  mode: "cors", // no-cors, *cors, same-origin
+                  cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+                  credentials: "same-origin", // include, *same-origin, omit
+                  headers: {
+                    "Content-Type": "application/json",
+                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                  },
+                  redirect: "follow", 
+                  referrerPolicy: "no-referrer", 
+    
+                  body: JSON.stringify({pname: productName, base: base, price: price,
+                where: where, imageURL:  imageurl, siteURL: siteurl, at1: at1,
+            at2: at2, at3: at3, at4: at4}), 
+                })
+    
+             console.log(response.data) ; ;
+            navigate('/homepage');
+
+            }
+            else if (category=== 'powersupply')
+            {
+                console.log("here2");
+
+                const response = await fetch('http://localhost:4000/api/auth/powersupply',
+                {
+                  method: "POST", // *GET, POST, PUT, DELETE, etc.
+                  mode: "cors", // no-cors, *cors, same-origin
+                  cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+                  credentials: "same-origin", // include, *same-origin, omit
+                  headers: {
+                    "Content-Type": "application/json",
+                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                  },
+                  redirect: "follow", 
+                  referrerPolicy: "no-referrer", 
+    
+                  body: JSON.stringify({pname: productName, base: base, price: price,
+                where: where, imageURL:  imageurl, siteURL: siteurl, at1: at1,
+            at2: at2, at3: at3, at4: at4}), 
+                })
+    
+             console.log(response.data) ; ;
+            navigate('/homepage');
+
+            }
+            else if (category=== 'motherboard')
+            {
+                console.log("here2");
+
+                const response = await fetch('http://localhost:4000/api/auth/motherboard',
+                {
+                  method: "POST", // *GET, POST, PUT, DELETE, etc.
+                  mode: "cors", // no-cors, *cors, same-origin
+                  cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+                  credentials: "same-origin", // include, *same-origin, omit
+                  headers: {
+                    "Content-Type": "application/json",
+                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                  },
+                  redirect: "follow", 
+                  referrerPolicy: "no-referrer", 
+    
+                  body: JSON.stringify({pname: productName, base: base, price: price,
+                where: where, imageURL:  imageurl, siteURL: siteurl, at1: at1,
+            at2: at2, at3: at3, at4: at4}), 
+                })
+    
+             console.log(response.data) ; ;
+            navigate('/homepage');
+
+            }
           }
+
           catch(error){
             console.log(error); 
           }
@@ -65,7 +287,7 @@ const ProductForm = () => {
     return (
         <React.Fragment>
             <h2>Product Form</h2>
-            <form>
+            <form onSubmit={pushItem}>
             <Stack spacing={2} direction="row" sx={{marginBottom: 4}}>
                     <TextField
                         type="text"
@@ -584,7 +806,7 @@ const ProductForm = () => {
                     </Stack>              
     
                 </form>  )} 
-                <Button variant="outlined" color="secondary" type="submit" onClick={pushItem}>Post</Button>
+                <Button variant="outlined" color="secondary" type="submit" >Post</Button>
 
             </form>     
         </React.Fragment>

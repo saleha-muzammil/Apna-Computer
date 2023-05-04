@@ -1,0 +1,43 @@
+.cpu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.cpu-image {
+  max-width: 100px;
+  margin-right: 10px;
+}
+
+.cpu-name {
+  font-size: 18px;
+  margin: 0;
+}
+
+.cpu-price {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.cpu-attributes {
+  display: flex;
+  flex-direction: column;
+}
+
+.cpu-attribute {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.cpu-attribute-label {
+  margin-right: 10px;
+}

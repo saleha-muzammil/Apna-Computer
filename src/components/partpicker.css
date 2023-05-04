@@ -4,17 +4,17 @@
     font-size: 16px;
   }
   
-  .th__component,
-  .th__selection,
-  .th__base,
-  .th__promo,
-  .th__shipping,
-  .th__tax,
-  .th__settings,
-  .th__price,
-  .th__where,
-  .th__buy,
-  .th__remove {
+  .h_component,
+  .h_selection,
+  .h_base,
+  .h_promo,
+  .h_shipping,
+  .h_tax,
+  .h_settings,
+  .h_price,
+  .h_where,
+  .h_buy,
+  .h_remove {
     text-align: center;
     font-weight: bold;
     padding: 12px;
@@ -24,9 +24,9 @@
     text-decoration-color:brown
   }
   
-  .td__component,
-  .td__placement--empty,
-  .td__addComponent {
+  .d_component,
+  .d_placement--empty,
+  .d_addComponent {
     text-align: center;
     padding: 8px;
     border: 1px solid #ddd;
@@ -74,15 +74,15 @@
     margin-bottom: 20px;
   }
   
-  .td__addComponent {
+  .d_addComponent {
     text-align: center;
   }
   
-  .td__addComponent a {
+  .d_addComponent a {
     text-decoration: none;
   }
   
-  .td__addComponent a:hover {
+  .d_addComponent a:hover {
     background-color: #eee;
   }
   a{

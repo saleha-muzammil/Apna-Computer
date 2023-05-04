@@ -57,10 +57,10 @@ function Signup() {
             <div><label>Not a member?</label></div>
             <div className="footer">
               <button class="button" onClick={() => { navigate('/register') }}>Register</button>
-            </div>
+              </div>
             <button class="button" onClick={() => { navigate('/productform') }}>test</button>
-
-          </div>
+            <button class="button" onClick={() => { navigate('/partpicker') }}>partpicker</button>
+          </div>          
         </form>
       </div>
     </div>
