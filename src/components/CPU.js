@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import CPU from './CPU.js';
+
 function CPUDisplay(props) {
   //const [products, setProducts] = useState([]);
   const style = {
@@ -31,7 +31,7 @@ function CPUDisplay(props) {
              onClick={() => {
               localStorage.setItem('selectedCpu', JSON.stringify(product));
               console.log(localStorage.getItem('selectedCpu'));
-              window.location.href = '/partpicker';
+              window.location.href = '/Partpicker';
             }}
              className="add-to-build-button">Add to build</button>
           </div>

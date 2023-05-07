@@ -1,9 +1,23 @@
 import React from 'react';
 import Navbar from './Navbar';
-import './homepage.css';
 import image from './images/bg2.png';
 import Slider from './Slider';
 import SliderTwo from './Slider2';
+import img1 from '../assets/img4.jpeg'
+import img2 from '../assets/img2.jpg'
+import img3 from '../assets/img3.webp'
+
+const content = [
+    {
+        img: img1,
+    },
+    {
+        img: img2,
+    },
+    {
+        img: img3,
+    }
+]
 
 function Homepage() {
 
@@ -18,87 +32,32 @@ function Homepage() {
     return (
         <div class="homepage_main min-h-screen" style={myStyle}>
             <Navbar />
-            <div class="container w-full mt-12">
-                <section className='w-full'>
-                    <div class="buildguideinfo">
-                        <div class="guidesinfo">
-                            <div class="child">
-                                <h1>Build Guides</h1>
-                            </div>
-                            <div class="child">
-                                <p>ur build guidihhhhdkdkdkdddkkdkdd
-                                    ddddddwiiw wwwkwkwk
-                                    wwkwkkwety of use-cases and budgets.</p>
-                            </div>
-                            <div class="child">
-                                <button class="button">View all</button>
-                            </div>
-
-                        </div>
-                        <div class="guidesinfo">
-                            <ul>
-                                <li class="guideGroup">
-                                    <a href="/guide/qFLrxr/entry-level-intel-gaming-build" class="guideGroup__target"></a>
-                                    <div class>
-                                        <h1 class="guide__title">Entry Level Intel Build</h1>
-                                        <ul class="guide__keyProducts list-unstyled">
-                                            <li>Intel Core i3-13100F</li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <ul class="guide__images list-unstyled">
-                                            <li class="guide__images--1">
-                                                {/* <img src="//cdna.pcpartpicker.com/static/forever/images/product/b32fb28bca9fb6780a07e11767da9f38.256p.jpg"></img> */}
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="guideGroup">
-                                    <a href="/guide/KrQzK8/great-amd-gaming-build" class="guideGroup__target"></a>
-                                    <div class="guideGroup__content--wrapper1">
-                                        <h1 class="guide__title">Great Gaming Build</h1>
-                                        <ul class="guide__keyProducts list-unstyled">
-                                            <li>AMD Ryzen 5 5600X</li>
-                                        </ul>
-                                    </div>
-                                    <div class>
-                                        <div class="guide__numbers">
-
-                                        </div>
-                                        <ul class="guide__images list-unstyled">
-                                            <li class="guide__images--1">
-                                                {/* <img src="//cdna.pcpartpicker.com/static/forever/images/product/c2a0ee7e8f2578f5da520a4c0d89a3c8.256p.jpg"></img> */}
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="guideGroup">
-                                    <a href="/guide/FV9TwP/magnificent-intel-gamingstreaming-build" class="guideGroup__target"></a>
-                                    <div class="guideGroup__content--wrapper1">
-                                        <h1 class="guide__title">Magnificent Streaming Build</h1>
-                                        <ul class="guide__keyProducts list-unstyled">
-                                            <li>Intel Core i7-13700K</li>
-                                        </ul>
-                                    </div>
-                                    <div class="guideGroup__content--wrapper2">
-                                        <div class="guide__numbers">
-                                        </div>
-                                        <ul class="guide__images list-unstyled">
-                                            <li class="guide__images--1">
-                                                {/* <img src="//cdna.pcpartpicker.com/static/forever/images/product/0610d363ccccf52837f07d811e4eb2a3.256p.jpg"></img> */}
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-
+            <div class="slider">
+                <div class="buttons">
+                    <a href="#slide-1" class ="firstSlideButton">BUILD</a>
+                    <a href="#slide-2" class ="secondSlideButton">BUY</a>
+                    <a href="#slide-3" class ="thirdSlideButton">HELP</a>
+                </div>
+                <span id="slide-1"></span>
+                <span id="slide-2"></span>
+                <span id="slide-3"></span>
+                <div class="image-container">
+                    <div class = "image1">
+                        <img src={img1} class="slide"/> 
+                         <div class = "txt1">Build Your Own Custom PC</div>
+                        <button class="btn first"><span>Let's Build</span></button>
                     </div>
-                </section>
-            </div>
-            <div className='w-full h-full mt-24 relative'>
-                <Slider />
-                <SliderTwo />
+                    <div class = "image2">
+                        <img src={img2} class="slide"/>
+                        <div class = "txt2">PRE Build PC's</div>
+                        <button class="btn second"><span>Perfect!</span></button>
+                    </div>
+                    <div class = "image3">
+                        <img src={img3} class="slide"/>
+                        <div class = "txt3">BUILD GUIDES</div>
+                        <button class="btn third"><span>Need Help</span></button>
+                    </div>
+                </div>
             </div>
         </div>
     );

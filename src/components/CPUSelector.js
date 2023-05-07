@@ -1,7 +1,7 @@
 import React from 'react'
 import CPUDisplay from './CPU';
 
-export default function Testrender() {
+export default function CPUSelector() {
     const [product, setProduct] = React.useState([{
         pname: '',
         price: '',
