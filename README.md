@@ -19,7 +19,7 @@ To get started with PC Part Picker, you will need to have Node.js and MongoDB in
     Run npm start to start the server.
     The server should now be running on http://localhost:4000.
     
-    ![image](https://github.com/saleha-muzammil/Apna-Computer/assets/84681153/8e020444-9b77-4a39-92a7-2aff4604995f)
+ ![image](https://github.com/saleha-muzammil/Apna-Computer/assets/84681153/8e020444-9b77-4a39-92a7-2aff4604995f)
   
 ## Features
 
@@ -32,7 +32,7 @@ PC Part Picker includes the following features:
     Price tracking and alerts to help users find the best deals on their selected components.
     Recommendations on where to buy different types of PC components based on availability and price.
     
-    ![image](https://github.com/saleha-muzammil/Apna-Computer/assets/84681153/7a3a560d-3900-4661-ab1c-fe594b61a81f)
+  ![image](https://github.com/saleha-muzammil/Apna-Computer/assets/84681153/7a3a560d-3900-4661-ab1c-fe594b61a81f)
 
 
 ## Contributing
