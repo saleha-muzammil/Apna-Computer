@@ -5,15 +5,15 @@ const {Schema} = mongoose;
 
 const cpuSchema = new Schema({
   pname: { type: String, required: true, unique: true },
-  base: { type: Number, required: true },
-  price: { type: Number, required: true, unique: true },
-  where: { type: String, required: true, unique: true },
-  imageURL: { type: String, required: true, unique: true },
+  base: { type: String, required: true },
+  price: { type: String, required: true },
+  where: { type: String, required: true},
+  imageURL: { type: String, required: true },
   siteURL: { type: String, required: true, unique: true },
-  cores: { type: Number, required: true, unique: true },
-  tdp: { type: String, required: true, unique: true },
-  coreclock: { type: String, required: true, unique: true },
-  graphic: { type: String, required: true, unique: true },
+  at1: { type: String, required: true },
+  at2: { type: String, required: true },
+  at3: { type: String, required: true },
+  at4: { type: String, required: true },
   
 });
 

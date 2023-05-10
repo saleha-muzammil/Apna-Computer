@@ -5,15 +5,15 @@ const {Schema} = mongoose;
 
 const motherboardSchema = new Schema({
   pname: { type: String, required: true, unique: true },
-  base: { type: Number, required: true },
-  price: { type: Number, required: true, unique: true },
-  where: { type: String, required: true, unique: true },
-  imageURL: { type: String, required: true, unique: true },
+  base: { type: String, required: true },
+  price: { type: String, required: true },
+  where: { type: String, required: true},
+  imageURL: { type: String, required: true },
   siteURL: { type: String, required: true, unique: true },
-  socket: { type: String, required: true, unique: true },
-  memorymax: { type: String, required: true, unique: true },
-  form: { type: String, required: true, unique: true },
-  slots: { type: Number, required: true, unique: true }
+  at1: { type: String, required: true },
+  at2: { type: String, required: true },
+  at3: { type: String, required: true },
+  at4: { type: String, required: true },
   
 });
 
