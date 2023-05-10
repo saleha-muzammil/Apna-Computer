@@ -3,11 +3,9 @@ import "./Navbar.css";
 import { useState, useMemo } from 'react'
 import Select from 'react-select'
 import countryList from 'react-select-country-list'
-import { useNavigate } from 'react-router-dom';
 
 
 function Navbar() {
-  const navigate = useNavigate();
   const [value, setValue] = useState('')
   const options = useMemo(() => countryList().getData(), [])
 
@@ -23,9 +21,9 @@ function Navbar() {
 
 <div classname="countrylist">
   <ul>
-<li>  <a href="/">Login</a> </li>
+<li>  <a href="/">Join Now</a> </li>
             <li>
-              <a href="/">Register</a>
+              <a href="/productform">Admin View</a>
             </li>
             <Select options={options} value={value} onChange={changeHandler} /></ul>
             </div>
@@ -34,8 +32,8 @@ function Navbar() {
 <section class="nav_bottom">
 <ul class="nav__categories list-unstyled" role="presentation">
 <li><a href="/partpicker">Builder</a></li>
-<li> <a href="/cpu">Build Guides</a> </li>
-<li> <a href="/">Completed Builds</a> </li>
+<li> <a href="/buildguide">Build Guides</a> </li>
+<li> <a href="/prebuild">Completed Builds</a> </li>
 <li> <a href="/">Browse Products</a> </li>
 </ul>
 </section>

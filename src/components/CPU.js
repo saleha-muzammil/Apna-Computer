@@ -1,21 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import './Product.css' ;
 
 function CPUDisplay(props) {
-  //const [products, setProducts] = useState([]);
   const style = {
     display: 'flex',
     flexDirection: 'column',
     width: '100%',
   }
 
-  /*useEffect(() => {
-    fetch('/cpu') //replace with a query that just looks up the CPU database table
-      .then(res => res.json())
-      .then(data => setProducts(data));
-  }, []);*/
 
   return (
     <div className="product-grid">
+                  <nav className="nav">
+            <section class="nav_top">
+            <h3 className="logoheader"> Choose Your CPU</h3>
+            </section>
+            </nav>
+      <table>
       <div style={style}
         className='cpu-row'>
         {props.product.map((product, index) => (
@@ -25,18 +26,20 @@ function CPUDisplay(props) {
             flexDirection: 'row',
             width: '100%',
           }}>
-            {product.pname}
-            {product.price}
-            <button
+            <tr>
+            <td>{product.pname}</td>
+            <td>{product.price}</td>
+            <td><button
              onClick={() => {
               localStorage.setItem('selectedCpu', JSON.stringify(product));
               console.log(localStorage.getItem('selectedCpu'));
-              window.location.href = '/Partpicker';
+              window.location.href = '/partpicker';
             }}
              className="add-to-build-button">Add to build</button>
-          </div>
+          </td></tr></div>
         ))}
       </div>
+      </table>
     </div>
   );
 }

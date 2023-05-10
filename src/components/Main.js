@@ -1,11 +1,20 @@
 import React from 'react';
 import image from './images/bg1.png';
 import Formfile from './formfile';
-import { useNavigate } from 'react-router-dom';
-
+import TextTransition, { presets } from 'react-text-transition';
 
 function Main(){
-  const navigate = useNavigate();
+
+  const TEXTS = ['Apna Computer', 'Build your dream pc with us.'];
+  const [index, setIndex] = React.useState(0);
+
+  React.useEffect(() => {
+    const intervalId = setInterval(
+      () => setIndex((index) => index + 1),
+      2000,
+    );
+    return () => clearTimeout(intervalId);
+  }, []);
 
   const myStyle = {backgroundImage: `url(${image})`, backgroundRepeat: 'no-repeat' , 
   backgroundSize : 'cover' ,
@@ -22,14 +31,11 @@ function Main(){
       <h3 class="header">
     اپنا کمپیوٹر
         </h3>
+        <h2 className= "header2">
+      <TextTransition springConfig={presets.wobbly}>{TEXTS[index % TEXTS.length]}</TextTransition>      
+    </h2>
         <div classname= "test">
       <Formfile/> </div>
-
-<button class="button" onClick={() => { navigate('/productform') }}>test</button>
-<button class="button" onClick={() => { navigate('/partpicker') }}>partpicker</button>
-<button class="button" onClick={() => { navigate('/homepage') }}>homepage</button>           
-<button class="button" onClick={() => { navigate('/Buildguide') }}>guide</button>            
-<button class="button" onClick={() => { navigate('/testing') }}>test2</button>  
 
 </div>
   );

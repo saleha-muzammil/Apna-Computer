@@ -29,7 +29,7 @@ class Formfile extends Component {
         const { rightPanelActive } = this.state;
         const containerClassName = `container ${rightPanelActive ? `right-panel-active` : ``}`;
         return (
-            <div className="App">
+            <div className="thecoolthing">
                 <div className={containerClassName} id="container">
                     <SignUp />
                     <SignIn />

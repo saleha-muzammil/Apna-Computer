@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Product.css' ;
 
 function CoolerDisplay(props) {
   //const [products, setProducts] = useState([]);
@@ -8,14 +9,14 @@ function CoolerDisplay(props) {
     width: '100%',
   }
 
-  /*useEffect(() => {
-    fetch('/cpu') //replace with a query that just looks up the CPU database table
-      .then(res => res.json())
-      .then(data => setProducts(data));
-  }, []);*/
-
   return (
     <div className="product-grid">
+                  <nav className="nav">
+            <section class="nav_top">
+            <h3 className="logoheader"> Choose Your CPU Cooler</h3>
+            </section>
+            </nav>
+      <table>
       <div style={style}
         className='cooler-row'>
         {props.product.map((product, index) => (
@@ -25,18 +26,21 @@ function CoolerDisplay(props) {
             flexDirection: 'row',
             width: '100%',
           }}>
-            {product.pname}
-            {product.price}
-            <button
+            <tr>
+            <td>{product.pname}</td>
+            <td>{product.price}</td>
+            <td><button
              onClick={() => {
               localStorage.setItem('selectedcooler', JSON.stringify(product));
               console.log(localStorage.getItem('selectedcooler'));
               window.location.href = '/Partpicker';
             }}
              className="add-to-build-button">Add to build</button>
+          </td></tr>
           </div>
         ))}
       </div>
+      </table>
     </div>
   );
 }

@@ -17,11 +17,10 @@ export default function MemorySelector() {
     React.useEffect(() => {
         const product_ = JSON.parse(localStorage.getItem('memory'));
         console.log(product)
-        product_.map((productIndex) => {
-            setProduct((prev) => [...prev, productIndex]);
-        }
-        )
-    }, [product])
+        if (product_ != null) {
+            setProduct(product_);
+          }
+        }, []);
     return (
         <div>
             <MemoryDisplay product={product} />

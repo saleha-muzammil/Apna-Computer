@@ -17,11 +17,10 @@ export default function MotherboardSelector() {
     React.useEffect(() => {
         const product_ = JSON.parse(localStorage.getItem('mobo'));
         console.log(product)
-        product_.map((productIndex) => {
-            setProduct((prev) => [...prev, productIndex]);
-        }
-        )
-    }, [product])
+        if (product_ != null) {
+            setProduct(product_);
+          }
+        }, []);
     return (
         <div>
             <MotherboardDisplay product={product} />

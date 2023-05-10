@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Product.css' ;
 
 function MotherboardDisplay(props) {
  
@@ -10,6 +11,12 @@ function MotherboardDisplay(props) {
 
   return (
     <div className="product-grid">
+                  <nav className="nav">
+            <section class="nav_top">
+            <h3 className="logoheader"> Choose Your Motherboard</h3>
+            </section>
+            </nav>
+      <table>
       <div style={style}
         className='cooler-row'>
         {props.product.map((product, index) => (
@@ -18,19 +25,20 @@ function MotherboardDisplay(props) {
             display: 'flex',
             flexDirection: 'row',
             width: '100%',
-          }}>
-            {product.pname}
-            {product.price}
-            <button
+          }}><tr>
+            <td>{product.pname}</td>
+            <td>{product.price}</td>
+            <td><button
              onClick={() => {
               localStorage.setItem('selectedmobo', JSON.stringify(product));
               console.log(localStorage.getItem('selectedmobo'));
               window.location.href = '/Partpicker';
             }}
              className="add-to-build-button">Add to build</button>
-          </div>
+          </td></tr></div>
         ))}
       </div>
+      </table>
     </div>
   );
 }

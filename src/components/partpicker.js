@@ -1,12 +1,12 @@
 import React from 'react';
 import Navbar from './Navbar';
 import './partpicker.css'
-import { useLocation, Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 
 function Partpicker()
 {
-  const [cpuName, setCpuName] = React.useState('');
+const [cpuName, setCpuName] = React.useState('');
 const [cpuPrice, setCpuPrice] = React.useState('');
 const [cpuWhere, setCpuWhere] = React.useState('');
 const [cpuURL, setCpuURL] = React.useState('');
@@ -345,8 +345,8 @@ React.useEffect(() => {
   }, [])
   
   React.useEffect(() => {
-  console.log(localStorage.getItem('selectedvideocard'));
-  const gpuFromStorage = JSON.parse(localStorage.getItem('selectedvideocard'));
+  console.log(localStorage.getItem('selectedVideocard'));
+  const gpuFromStorage = JSON.parse(localStorage.getItem('selectedVideocard'));
   setGpuName(gpuFromStorage?.pname);
   setGpuPrice(gpuFromStorage?.price);
   setGpuWhere(gpuFromStorage?.where);
@@ -354,8 +354,8 @@ React.useEffect(() => {
   }, [])
   
   React.useEffect(() => {
-  console.log(localStorage.getItem('selectedcase'));
-  const caseFromStorage = JSON.parse(localStorage.getItem('selectedcase'));
+  console.log(localStorage.getItem('selectedCase'));
+  const caseFromStorage = JSON.parse(localStorage.getItem('selectedCase'));
   setCaseName(caseFromStorage?.pname);
   setCasePrice(caseFromStorage?.price);
   setCaseWhere(caseFromStorage?.where);
@@ -376,7 +376,7 @@ React.useEffect(() => {
         <div>
           <Navbar/>
             <div>
-                <h1> Choose your parts</h1>
+                <h3 className= "partsheader"> Choose your parts</h3>
                 <div>
                     <table class="parttable">
                     <thead>
@@ -502,6 +502,16 @@ Power Supply
 </tr>
 </tbody>
                     </table>
+                    <h1 className= "costheader">Total Cost: {
+  (parseInt(cpuPrice) || 0) +
+  (parseInt(coolerPrice) || 0) +
+  (parseInt(moboPrice) || 0) +
+  (parseInt(storagePrice) || 0) +
+  (parseInt(memoryPrice) || 0) +
+  (parseInt(casePrice) || 0) +
+  (parseInt(psuPrice) || 0) +
+  (parseInt(videocardPrice) || 0)
+}</h1>
                 </div>
             </div>
         </div>

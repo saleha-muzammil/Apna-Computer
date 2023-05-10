@@ -4,8 +4,8 @@ import Homepage from './components/homepage.js';
 import Partpicker from './components/partpicker.js';
 import Register from './components/register';
 import CPUDisplay from './components/CPU';
-import ProductForm from './components/seller';
-import {BrowserRouter,Routes,Route} from "react-router-dom";
+import ProductForm from './components/admin.js';
+import {Routes,Route} from "react-router-dom";
 import React from 'react';
 import Testrender from './components/Testrender';
 import CPUSelector from './components/CPUSelector';
@@ -18,6 +18,7 @@ import CaseSelector from './components/CaseSelector';
 import PSUSelector from './components/PSUSelector';
 import Buildguide from './components/buildguide';
 import Formfile from './components/formfile';
+import PreBuild from './components/preBuild';
 
 function App() {
   return (
@@ -39,8 +40,9 @@ function App() {
         <Route exact path="/VideocardSelector" element={<VideocardSelector/>}></Route>
         <Route exact path="/CaseSelector" element={<CaseSelector/>}></Route> 
         <Route exact path="/PSUSelector" element={<PSUSelector/>}></Route>        
-        <Route exact path="/Buildguide" element={<Buildguide/>}></Route>
+        <Route exact path="/buildguide" element={<Buildguide/>}></Route>
         <Route exact path="/formfile" element={<Formfile/>}></Route>
+        <Route exact path="/preBuild" element={<PreBuild/>}></Route>
        
         </Routes>
     </div>

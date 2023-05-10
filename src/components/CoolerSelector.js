@@ -1,7 +1,7 @@
 import React from 'react'
 import CoolerDisplay from './Cooler';
 
-export default function CoolerSelector() {
+function CoolerSelector() {
     const [product, setProduct] = React.useState([{
         pname: '',
         price: '',
@@ -17,14 +17,15 @@ export default function CoolerSelector() {
     React.useEffect(() => {
         const product_ = JSON.parse(localStorage.getItem('cooler'));
         //console.log(product);
-        product_.map((productIndex) => {
-            setProduct((prev) => [...prev, productIndex]);
-        }
-        )
-    }, [])
+        if (product_ != null) {
+            setProduct(product_);
+          }
+        }, []);
     return (
         <div>
             <CoolerDisplay product={product} />
         </div>
     )
 }
+
+export default CoolerSelector ;
