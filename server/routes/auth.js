@@ -4,7 +4,7 @@ const User= require('../models/user') ;
 const Cpu= require ('../models/cpu') ;
 const Cpucooler= require ('../models/cpucooler') ;
 const Motherboard= require ('../models/motherboard') ;
-const Cases= require ('../models/cases') ;
+const Case= require ('../models/cases') ;
 const Powersupply= require ('../models/powersupply') ;
 const Videocard= require ('../models/videocard') ;
 const Memory= require ('../models/memory') ;
@@ -305,7 +305,7 @@ router.get('/caseget', async (req, res) => {
       }
     });
   } catch (err) {
-    console.log('error');
+    console.log(err);
     res.json(err);
   }
 });
