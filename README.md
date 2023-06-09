@@ -1,6 +1,6 @@
-# PC Part Picker
+# Apna Computer
 
-PC Part Picker is a web application that helps users build custom PC configurations by selecting compatible parts from a vast inventory. It is built using the MERN stack (MongoDB, Express, React, Node.js) and features a beautiful user interface designed for a seamless user experience.
+Apna Computer is a web application that helps users build custom PC configurations by selecting compatible parts from a vast inventory. It is built using the MERN stack (MongoDB, Express, React, Node.js) and features a beautiful user interface designed for a seamless user experience.
 ![image](https://github.com/saleha-muzammil/Apna-Computer/assets/84681153/5ab29a85-a99d-461c-b685-51e28ba54267)
 
 
